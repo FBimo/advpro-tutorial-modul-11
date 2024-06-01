@@ -1,0 +1,34 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"creationTimestamp":"2024-05-31T15:19:32Z","labels":{"app":"spring-petclinic-rest"},"name":"spring-petclinic-rest","namespace":"default","resourceVersion":"3290","uid":"ab42f3d6-a872-4ac9-a294-3a4dede8b6bc"},"spec":{"allocateLoadBalancerNodePorts":true,"clusterIP":"10.100.119.16","clusterIPs":["10.100.119.16"],"externalTrafficPolicy":"Cluster","internalTrafficPolicy":"Cluster","ipFamilies":["IPv4"],"ipFamilyPolicy":"SingleStack","ports":[{"nodePort":31255,"port":9966,"protocol":"TCP","targetPort":9966}],"selector":{"app":"spring-petclinic-rest"},"sessionAffinity":"None","type":"LoadBalancer"},"status":{"loadBalancer":{}}}
+  creationTimestamp: "2024-05-31T15:19:32Z"
+  labels:
+    app: spring-petclinic-rest
+  name: spring-petclinic-rest
+  namespace: default
+  resourceVersion: "4377"
+  uid: ab42f3d6-a872-4ac9-a294-3a4dede8b6bc
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.100.119.16
+  clusterIPs:
+  - 10.100.119.16
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 31255
+    port: 9966
+    protocol: TCP
+    targetPort: 9966
+  selector:
+    app: spring-petclinic-rest
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer: {}
